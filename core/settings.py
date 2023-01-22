@@ -23,9 +23,9 @@ CORE_DIR =os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-*6hhm-ia#40#*)9_6!mx#-ia^3usjzj_w@98j!r391w$3v6p@k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pbalaji.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition

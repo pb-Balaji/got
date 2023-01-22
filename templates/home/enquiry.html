@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block title%}{{title}}{%endblock title%}
+
+{% block main %} 
+
+
+<h1> Welcome to  Enquiry page</h1>
+
+{%for n in enquirydata%}
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Name :{{n.name}}</div>
+    <div class="card-header">Email :{{n.email}}</div>
+    <div class="card-body">
+      <h5 class="card-title">Subject :{{n.subject}}</h5>
+      <p class="card-text">Message :{{n.message}}</p>
+    </div>
+</div>
+    <br>
+    <br>
+
+{%endfor%}
+
+{% endblock main %}

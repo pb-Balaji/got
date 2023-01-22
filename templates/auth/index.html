@@ -268,7 +268,7 @@
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                   <img src="{% static 'assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="{% static 'assets/img/testimonial-1.jpg' %}" class="testimonial-img" alt="">
+                <img src="{% static 'assets/img/Default-avatar.jpg' %}" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
@@ -281,7 +281,7 @@
                   Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                   <img src="{% static 'assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="{% static 'assets/img/testimonial-2.jpg' %}" class="testimonial-img" alt="">
+                <img src="{% static 'assets/img/Default-avatar.jpg' %}" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
@@ -294,7 +294,7 @@
                   Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                   <img src="{% static 'assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="{% static 'assets/img/testimonial-3.jpg' %}" class="testimonial-img" alt="">
+                <img src="{% static 'assets/img/Default-avatar.jpg' %}" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
@@ -307,7 +307,7 @@
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                   <img src="{% static 'assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="{% static 'assets/img/testimonial-4.jpg' %}" class="testimonial-img" alt="">
+                <img src="{% static 'assets/img/Default-avatar.jpg' %}" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
@@ -320,7 +320,7 @@
                   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                   <img src="{% static 'assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="{% static 'assets/img/testimonial-5.jpg' %}" class="testimonial-img" alt="">
+                <img src="{% static 'assets/img/Default-avatar.jpg' %}" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -467,8 +467,8 @@
       <div class="container">
         <div class="form">
           <h2>Contact us</h2>
-          <form method="POST" action ="{% url 'enquiry' %}"role="form" class="php-email-form">
-            {% csrf_token %}
+          <form method="POST" action ="{% url 'enquiry'%}"role="form" class="form-control">
+            {%csrf_token%}
             <div class="row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -481,10 +481,10 @@
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" ></textarea>
             </div>
-
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <br>
+            <button type="submit" class="btn btn-primary mb-2">Send Enquiry</button>
           </form>
         </div>
 
