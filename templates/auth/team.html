@@ -1,0 +1,87 @@
+{%extends 'base.html'%}
+
+
+{%load static%}
+{% block main%}
+
+
+
+
+
+<!-- ======= Team Section ======= -->
+<section id="team">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Our Team</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
+            <div class="details">
+              <h4>Vinoth K</h4>
+              <span>Project Manager</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
+            <div class="details">
+              <h4>Sivashankar K</h4>
+              <span>Project Co-ordinator</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
+            <div class="details">
+              <h4>Vignesh T</h4>
+              <span>CPO</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
+            <div class="details">
+              <h4>Naveen A</h4>
+              <span>Project Engineer</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+
+  {%include 'auth/footer.html'%}
+{%endblock main%}

@@ -1,0 +1,95 @@
+{%extends 'base.html'%}
+
+
+{%load static%}
+{% block main%}
+
+
+
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Services</h2>
+            <p>The key to successful industrial automation is in PLC Programming. An incorrectly programmed PLC can result in costly downtime and can even cause damage to equipment or a plant. GOT has qualified professionals with programming experience on all types of PLCs from leading manufacturers for all kinds of industries, from concept to commissioning, including selecting the right PLC for a given application.
+              The GOT Team has the knowledge and expertise in following areas:
+              Automotive Assembly Lines, Paint Shop Automation, Automated Welding Assembly, Machine Shop Automation, Foundry Furnace Automation, Steel Mills      </div>
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="box">
+                <div class="icon"><i class="bi bi-ethernet"></i></div>
+                <h4 class="title"><a href="">PLC</a></h4>
+                <p class="description">Siemens.
+                  Allen Bradley.
+                  ABB,
+                  Omron,
+                  Delta,
+                  Honeywell,
+                  GeFanuc.,
+                  Schneider Electric</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="box">
+                <div class="icon"><i class="bi bi-back"></i></div>
+                <h4 class="title"><a href="">SCADA</a></h4>
+                <p class="description">Delta Diaview SCADA,
+                  VT SCADA, Siemens Simatic SCADA, Allen Bradley FactoryTalk View SCADA,GE Cimplicity SCADA, Movicon SCADA</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="box">
+                <div class="icon"><i class="bi bi-play-btn"></i></div>
+                <h4 class="title"><a href="">HMI</a></h4>
+                <p class="description">1.Honeywell International Inc.,2.Siemens AG, 3.Rockwell Automation Inc.,4.Schneider Electric SE,5.ABB Ltd, 6.General Electric SE,7.Emerson Electric Co.,8. Mitsubishi Electric Corporation</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="box">
+                <div class="icon"><i class="bi bi-binoculars"></i></div>
+                <h4 class="title"><a href="">IOT Projects</a></h4>
+                <p class="description">Things or Devices · User Interface · Cloud · Analytics · Network Interconnection · System Security · Central Control Hardware.</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+  
+      <!-- ======= Clients Section ======= -->
+      <section id="clients">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Hardware used</h2>
+            <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          </div>
+  
+          <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+        </div>
+      </section><!-- End Clients Section -->
+
+      {%include 'auth/footer.html'%}
+
+{%endblock main%}

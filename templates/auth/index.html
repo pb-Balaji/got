@@ -1,83 +1,7 @@
-{%extends 'base.html'%}
+{% extends 'base.html'%}
 {%load static%}
 
 {% block main%}
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="getourtech@outlook.com">getourtech@outlook.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 94429 23756</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section><!-- End Top Bar-->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-
-      <div id="logo">
-        <h1><a href="index.html">GO<span>T</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="{% static 'assets/img/logo.png" alt=""></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="#">Welcome, {{user.username}}</a>
-          </li>
-          <li><a class="nav-link scrollto" href="{% url 'logout'%}"> 
-            <button type="button" class="btn btn-danger">Logout</button></a>
-          </li>
-    
-          {% else %}
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-
-          <li><a class="nav-link scrollto" href="{% url 'login'%}"> 
-            <button type="button" class="btn btn-primary">Login</button></a>
-          </li>
-    
-          {% endif %}
-
-
-
-         
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
 
   <!-- ======= hero Section ======= -->
   <section id="hero">
@@ -85,7 +9,7 @@
     <div class="hero-content" data-aos="fade-up">
       <h2>Making <span>your ideas</span><br>happen!</h2>
       <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="{%url 'contact'%}" class="btn-get-started scrollto">Get Started</a>
         <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
       </div>
     </div>
@@ -113,8 +37,9 @@
           </div>
 
           <div class="col-lg-6 content">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h2>Need a quote for a project?
+              Get in touch…</h2>
+            <h3>If you're here it means you want to start a journey. We would love to get to know you and take you on that journey. We'll be perfect for each other - you'll see….</h3>
 
             <ul>
               <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -133,40 +58,49 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Services</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-        </div>
+          <p>The key to successful industrial automation is in PLC Programming. An incorrectly programmed PLC can result in costly downtime and can even cause damage to equipment or a plant. GOT has qualified professionals with programming experience on all types of PLCs from leading manufacturers for all kinds of industries, from concept to commissioning, including selecting the right PLC for a given application.
+            The GOT Team has the knowledge and expertise in following areas:
+            Automotive Assembly Lines, Paint Shop Automation, Automated Welding Assembly, Machine Shop Automation, Foundry Furnace Automation, Steel Mills      </div>
 
         <div class="row gy-4">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
-              <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
+              <div class="icon"><i class="bi bi-ethernet"></i></div>
+              <h4 class="title"><a href="">PLC</a></h4>
+              <p class="description">Siemens.
+                Allen Bradley.
+                ABB,
+                Omron,
+                Delta,
+                Honeywell,
+                GeFanuc.,
+                Schneider Electric</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera clas.</p>
+              <div class="icon"><i class="bi bi-back"></i></div>
+              <h4 class="title"><a href="">SCADA</a></h4>
+              <p class="description">Delta Diaview SCADA,
+                VT SCADA, Siemens Simatic SCADA, Allen Bradley FactoryTalk View SCADA,GE Cimplicity SCADA, Movicon SCADA</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur trinige zareta lobur trade.</p>
+              <div class="icon"><i class="bi bi-play-btn"></i></div>
+              <h4 class="title"><a href="">HMI</a></h4>
+              <p class="description">1.Honeywell International Inc.,2.Siemens AG, 3.Rockwell Automation Inc.,4.Schneider Electric SE,5.ABB Ltd, 6.General Electric SE,7.Emerson Electric Co.,8. Mitsubishi Electric Corporation</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
               <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum rideta zanox satirente madera</p>
+              <h4 class="title"><a href="">IOT Projects</a></h4>
+              <p class="description">Things or Devices · User Interface · Cloud · Analytics · Network Interconnection · System Security · Central Control Hardware.</p>
             </div>
           </div>
 
@@ -179,7 +113,7 @@
     <section id="clients">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Clients</h2>
+          <h2>Hardware used</h2>
           <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
         </div>
 
@@ -204,16 +138,16 @@
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Our Portfolio</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>Our Features</h2>
+          <p>                  For any equipment, there are broad recommendations from the manufacturer about the desired attributes of such devices and even preferences are often mentioned. However, for customers, there are other considerations like what are the devices used in their existing equipment and their experience with those vendors. Using devices from the same brand and make makes sense as that helps better inventory management. But sometimes the desired requirements are better with rival makes, and it may be prudent to opt for that. Outsourcing agencies put all the options and it is for the customer to take the call</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-app">RPA</li>
+              <li data-filter=".filter-card">IOT</li>
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
@@ -423,10 +357,10 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="{% static 'assets/img/team-1.jpg' %}" alt=""></div>
+              <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
               <div class="details">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Vinoth K</h4>
+                <span>Project Manager</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -439,10 +373,10 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="{% static 'assets/img/team-2.jpg' %}" alt=""></div>
+              <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
               <div class="details">
-                <h4>Sarah Jhinson</h4>
-                <span>Product Manager</span>
+                <h4>Sivashankar K</h4>
+                <span>Project Co-ordinator</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -455,10 +389,10 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="{% static 'assets/img/team-3.jpg' %}" alt=""></div>
+              <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
               <div class="details">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Vignesh T</h4>
+                <span>CPO</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -471,10 +405,10 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="{% static 'assets/img/team-4.jpg' %}" alt=""></div>
+              <div class="pic"><img src="{% static 'assets/img/Default-avatar.jpg' %}" alt=""></div>
               <div class="details">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Naveen A</h4>
+                <span>Project Engineer</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -494,7 +428,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>If you're here it means you want to start a journey. We would love to get to know you and take you on that journey. We'll be perfect for each other - you'll see…</p>
         </div>
 
         <div class="row contact-info">
@@ -503,7 +437,7 @@
             <div class="contact-address">
               <i class="bi bi-geo-alt"></i>
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>Sfno,185/1c1, Thattanchavadi,Pudur, karuppur,Salem-636 012, TamilNadu.</address>
             </div>
           </div>
 
@@ -511,7 +445,7 @@
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:+91 79048 45485">+91 79048 45485 ,+91 82200 66336 </a></p>
             </div>
           </div>
 
@@ -519,7 +453,7 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="getourtech@gmail.com">getourtech@gmail.com</a></p>
             </div>
           </div>
 
@@ -527,12 +461,14 @@
       </div>
 
       <div class="container mb-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d79343.67062204808!2d78.15060380033214!3d11.6498091730933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1673973361532!5m2!1sen!2sin"  width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
 
       <div class="container">
         <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <h2>Contact us</h2>
+          <form method="POST" action ="{% url 'enquiry' %}"role="form" class="php-email-form">
+            {% csrf_token %}
             <div class="row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -548,12 +484,6 @@
               <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
             </div>
 
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
@@ -562,24 +492,8 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+{%include 'auth/footer.html'%}
+  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 {% endblock main%}

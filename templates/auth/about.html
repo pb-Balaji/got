@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+
+{%load static%}
+{% block main%}
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{% static 'assets/img/about-img.jpg' %}" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>Need a quote for a project?
+              Get in touch…</h2>
+            <h3>If you're here it means you want to start a journey. We would love to get to know you and take you on that journey. We'll be perfect for each other - you'll see….</h3>
+
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    {%include 'auth/footer.html'%}
+    {% endblock main%}
